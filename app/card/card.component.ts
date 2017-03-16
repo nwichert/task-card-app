@@ -1,4 +1,6 @@
-import { Component } from '@angular/core'; // every component will have this
+import { Component, Input } from '@angular/core'; // every component will have this
+
+import { Task } from '../model/task';
 
 @Component({
   moduleId: module.id, // not required if you do inline templating
@@ -7,4 +9,12 @@ import { Component } from '@angular/core'; // every component will have this
   styleUrls: [ 'card.component.css' ] // always needs to be an array
 })
 
-export class CardComponent { }
+export class CardComponent { 
+  @Input() task: Task; // created a property called Task
+ }
+
+
+
+
+// @Input allows us to pass data into this property
+// Input in imported from @angular/core
