@@ -11,6 +11,10 @@ import { Task } from '../model/task';
 
 export class CardComponent { 
   @Input() task: Task; // created a property called Task
+
+  statusToggle() {
+    this.task.completed = !this.task.completed;
+  }
  }
 
 

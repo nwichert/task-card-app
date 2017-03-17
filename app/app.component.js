@@ -12,11 +12,14 @@ var core_1 = require('@angular/core');
 var task_1 = require('./model/task');
 var AppComponent = (function () {
     function AppComponent() {
-        this.tasks = [
-            new task_1.Task("Buy a monkey", false),
-            new task_1.Task("Sell the money", false)
-        ];
+        this.tasks = []; // Task is our data type of array
+        this.currentTask = new task_1.Task(null, false);
     }
+    AppComponent.prototype.addTask = function () {
+        var task = new task_1.Task(this.currentTask.content, this.currentTask.completed); // let defines a new variable
+        this.tasks.push(task); // push method is used on arrays to add it to the end
+        this.currentTask.content = null;
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

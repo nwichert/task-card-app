@@ -10,10 +10,16 @@ form {
   text-align: center;
 }
 
-.btn {
+.btn,
+.btn:disabled:hover {
   background-color: #009688;
   border-color: #009688;
   margin-left: 1rem;
+}
+
+.btn:hover {
+  background-color: #00796B;
+  border-color: #00796B;
 }
 
 .form-control:focus {
@@ -22,4 +28,10 @@ form {
 
 i {
   padding-right: .5rem;
+}
+
+h5 {
+  color: #CCC;
+  text-align: center;
+  margin-top: 3rem;
 }
